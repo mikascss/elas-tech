@@ -2,9 +2,17 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        StringBuilder texto = new StringBuilder("Olá");
-        System.out.println(texto);
-        texto.append(" Mundo");
-        System.out.println(texto);
+        try {
+            int resultado = 10 / 0;
+            System.out.println(resultado);
+
+        } catch (ArithmeticException e) {
+            System.out.println("Não dá pra dividir por zero!");
+
+        } finally {
+            System.out.println("Isso sempre roda.");
+        }
+
+        System.out.println("O programa continua.");
     }
 }
