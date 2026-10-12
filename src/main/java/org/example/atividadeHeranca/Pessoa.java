@@ -1,10 +1,10 @@
 package org.example.atividadeHeranca;
 
 public class Pessoa {
-    String nome;
-    int idade;
+    public String nome;
+    public int idade;
 
-    void apresentar(){
+    public void apresentar(){
         System.out.println("Oi, sou " + this.nome + " e tenho " + this.idade + " anos.");
     }
 }

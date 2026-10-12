@@ -8,7 +8,7 @@ public class Professora extends Pessoa {
     }
 
     @Override
-    void apresentar(){
+    public void apresentar(){
         System.out.println("Oi, sou " + super.nome + " e ensino " + this.disciplina);
     }
 }
