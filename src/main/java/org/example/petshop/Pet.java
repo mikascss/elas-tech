@@ -8,34 +8,25 @@ public class Pet {
     double peso;
     String porte;
 
-    public String calcularPorte(){
+    protected void emitirSom(){
+        System.out.println(nome + " emitiu um som.");
+    }
+
+    public void calcularPorte(){
         if(peso < 10){
-            return "Pequeno";
+            porte = "Pequeno";
         } else if(peso >= 10 && peso < 25){
-            return "Médio";
+            porte = "Médio";
         } else {
-            return "Grande";
+            porte = "Grande";
         }
     }
 
-    public void cadastrar(){
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Nome do pet: ");
-        this.nome = sc.nextLine();
-        System.out.print("Espécie: ");
-        this.especie = sc.nextLine();
-        System.out.print("Peso (kg): ");
-        this.peso = sc.nextDouble();
-        this.porte = this.calcularPorte();
-        imprimirFichaDoPet(this);
-    }
-
-    private static void imprimirFichaDoPet(Pet pet){
+    public void imprimirFichaDoPet(){
         System.out.println("=== FICHA DO PET ===");
-        System.out.println("Nome: " + pet.nome);
-        System.out.println("Espécie: " + pet.especie);
-        System.out.printf("Peso: %.1f kg\n", pet.peso);
-        System.out.println("Porte: " + pet.porte);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Espécie: " + this.especie);
+        System.out.printf("Peso: %.1f kg\n", this.peso);
+        System.out.println("Porte: " + this.porte);
     }
 }
