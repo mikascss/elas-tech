@@ -115,8 +115,8 @@ public class Petshop {
             if(pet == null) {
                 break;
             }
-            System.out.printf("%s (%s) - %.1f kg - Porte %s\n", pet.nome, pet.especie,
-                    pet.peso, pet.porte);
+            System.out.printf("%s (%s) - %.1f kg - Porte %s\n", pet.getNome(), pet.getEspecie(),
+                    pet.getPeso(), pet.getPorte());
             pet.emitirSom();
         }
     }
@@ -131,9 +131,9 @@ public class Petshop {
             if(pet == null) {
                 break;
             }
-            if(pet.nome.equalsIgnoreCase(nomePet)){
-                System.out.printf("Encontrado: %s (%s) - %.1f kg\n", pet.nome, pet.especie,
-                        pet.peso);
+            if(pet.getNome().equalsIgnoreCase(nomePet)){
+                System.out.printf("Encontrado: %s (%s) - %.1f kg\n", pet.getNome(), pet.getEspecie(),
+                        pet.getPeso());
                 encontrado = true;
             }
         }
@@ -150,7 +150,7 @@ public class Petshop {
                 System.out.println("Nenhuma espécie cadastrada.");
                 break;
             }
-            String especie = pet.especie.substring(0,1).toUpperCase() + pet.especie.substring(1).toLowerCase();
+            String especie = pet.getEspecie().substring(0,1).toUpperCase() + pet.getEspecie().substring(1).toLowerCase();
             especies.add(especie);
         }
 
@@ -195,14 +195,14 @@ public class Petshop {
     }
 
     static void imprimir(Pet pet){
-        System.out.println("Nome: " + pet.nome);
+        System.out.println("Nome: " + pet.getNome());
     }
 
     static void imprimir(Pet pet, String titulo){
         System.out.println(titulo);
-        System.out.println("Nome: " + pet.nome);
-        System.out.println("Espécie: " + pet.especie);
-        System.out.printf("Peso: %.1f kg\n", pet.peso);
-        System.out.println("Porte: " + pet.porte);
+        System.out.println("Nome: " + pet.getNome());
+        System.out.println("Espécie: " + pet.getEspecie());
+        System.out.printf("Peso: %.1f kg\n", pet.getPeso());
+        System.out.println("Porte: " + pet.getPorte());
     }
 }

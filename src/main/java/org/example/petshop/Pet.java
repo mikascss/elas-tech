@@ -1,10 +1,26 @@
 package org.example.petshop;
 
 public class Pet {
-    String nome;
-    String especie;
-    double peso;
-    String porte;
+    private String nome;
+    private String especie;
+    private double peso;
+    private String porte;
+
+    public String getNome(){
+        return nome;
+    }
+
+    public String getEspecie(){
+        return especie;
+    }
+
+    public String getPorte(){
+        return porte;
+    }
+
+    public double getPeso(){
+        return peso;
+    }
 
     public void cadastrar(String nome, String especie, double peso){
         this.nome = nome;
