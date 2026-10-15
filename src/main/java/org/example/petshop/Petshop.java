@@ -20,17 +20,7 @@ public class Petshop {
 
         while(opcao != 0){
             try {
-                System.out.println("=== PETSHOP ===");
-                System.out.println("1 - Cadastrar pet");
-                System.out.println("2 - Listar pets");
-                System.out.println("3 - Buscar pet");
-                System.out.println("4 - Listar espécies cadastradas");
-                System.out.println("5 - Entrar na fila de banho");
-                System.out.println("6 - Atender o próximo");
-                System.out.println("7 - Tratar pet");
-                System.out.println("8 - Polimorfismo");
-                System.out.println("0 - Sair");
-                System.out.print("Escolha: ");
+                imprimirMenu();
                 opcao = sc.nextInt();
                 sc.nextLine();
                 switch (opcao) {
@@ -79,6 +69,20 @@ public class Petshop {
         }
     }
 
+    static void imprimirMenu(){
+        System.out.println("=== PETSHOP ===");
+        System.out.println("1 - Cadastrar pet");
+        System.out.println("2 - Listar pets");
+        System.out.println("3 - Buscar pet");
+        System.out.println("4 - Listar espécies cadastradas");
+        System.out.println("5 - Entrar na fila de banho");
+        System.out.println("6 - Atender o próximo");
+        System.out.println("7 - Tratar pet");
+        System.out.println("8 - Polimorfismo");
+        System.out.println("0 - Sair");
+        System.out.print("Escolha: ");
+    }
+
     static Pet cadastrar(){
         Scanner sc = new Scanner(System.in);
         Pet pet;
@@ -96,11 +100,7 @@ public class Petshop {
         } else {
             pet = new Pet();
         }
-        pet.nome = nome;
-        pet.especie = especie;
-        pet.peso = peso;
-        pet.calcularPorte();
-        pet.imprimirFichaDoPet();
+        pet.cadastrar(nome, especie, peso);
         return pet;
     }
 

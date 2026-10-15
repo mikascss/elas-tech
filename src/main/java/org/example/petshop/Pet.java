@@ -1,12 +1,18 @@
 package org.example.petshop;
 
-import java.util.Scanner;
-
 public class Pet {
     String nome;
     String especie;
     double peso;
     String porte;
+
+    public void cadastrar(String nome, String especie, double peso){
+        this.nome = nome;
+        this.especie = especie;
+        this.peso = peso;
+        this.calcularPorte();
+        imprimirFichaDoPet();
+    }
 
     protected void emitirSom(){
         System.out.println(nome + " emitiu um som.");
