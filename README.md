@@ -22,6 +22,8 @@ Ao longo do bootcamp, este repositório poderá conter estudos e projetos utiliz
 
 - Java
 - Programação Orientada a Objetos
+- Design Patterns (Criacionais, Estruturais e Comportamentais)
+- Testes (JUnit e Mockito)
 - Collections
 - Tratamento de exceções
 - Git e GitHub
